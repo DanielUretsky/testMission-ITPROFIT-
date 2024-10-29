@@ -1,0 +1,50 @@
+@use './variables' as vars;
+
+@mixin center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin fields-style($width, $height, ) {
+    width: $width;
+    height: $height;
+
+    padding: 0 5px;
+
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid vars.$black;
+
+    font-size: 0.8rem;
+
+    transition: transform 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.02);
+        box-shadow: 0 0 5px 0 vars.$gray-opacity;
+    }
+}
+
+@mixin font($fsize, $fweight: normal) {
+    font-size: $fsize;
+    font-weight: $fweight;
+}
+
+@mixin button-style($border-radius) {
+    outline: none;
+    border: none;
+    border-radius: $border-radius;
+
+    background-color: vars.$blue;
+    color: vars.$white;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 5px 0 vars.$black;
+    }
+} 

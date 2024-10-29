@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="container">
+        <img 
+            class="container__modal-icon"
+            id="modalIcon"
+            src="./assets/images/open.png" 
+            alt="Open modal"
+        >
+        <main class="contact">
+            <header class="contact__header">
+                <div class="contact__circle">Contact Us</div>
+                <h2 class="contact__text">Let's Get In Touch</h2>
+            </header>
+            <form class="contact__form" id="contactForm">
+                <label for="fullname">
+                    Full Name
+                    <input
+                        id="fullname"
+                        name="fullname"
+                        minlength="3"
+                        aria-label="Full name"
+                        class="contact__input" 
+                        type="text" 
+                        placeholder="John Doe"
+                        required
+                    >
+                </label>
+
+                <label for="email">
+                    Email
+                    <input 
+                        class="contact__input" 
+                        id="email"
+                        name="email"
+                        aria-label="Email"
+                        type="email"
+                        placeholder="example@domain.com"
+                        pattern="^(?![_\.\-])[a-zA-Z\d_\.\-]{0,63}@[a-zA-Z\d\-]+\.[a-zA-Z]{2,14}$"
+                        required
+                    >
+                </label>
+                <label for="phone">
+                    Phone
+                    <input 
+                        class="contact__input" 
+                        id="phone"
+                        name="phone"
+                        aria-label="Phone"
+                        type="tel" 
+                        minlength="12"
+                        placeholder="+0000000000"
+                        required
+                    >
+                </label>
+
+                <label for="message">
+                    Message
+                    <textarea 
+                        class="contact__textarea"
+                        aria-label="Message"
+                        name="message" 
+                        id="message" 
+                        rows="4" 
+                        cols="50" 
+                        form="contactForm"
+                        maxlength="300"
+                        minlength="10"
+                        required
+                    ></textarea>
+                </label>
+
+                <button class="contact__button-submit" type="submit">
+                    Submit
+                </button>
+
+                <span class="contact__validation-message"></span>
+            </form>
+        </main>
+    </div>
+
+    <div 
+        class="modal-root"
+        id="modalRoot"
+    >
+        <div class="modal">
+            <p>Some modal text</p>
+            <button 
+                class="modal__button-close"
+                id="closeModal"
+            >
+                Close
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

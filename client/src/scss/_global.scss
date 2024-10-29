@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/assets/fonts/Inter-VariableFont_opsz\,wght.ttf'),
+    url('../../public/assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-size: 24px;
+    font-family: "Inter";
+}
